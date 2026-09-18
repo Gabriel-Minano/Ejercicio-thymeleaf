@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang='es' xmlns:th="http://thymeleaf.org">
+
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Libros</title>
+    <link rel='stylesheet' href=''>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container container-sm">
+        <header class="bg-primary">
+            <h3>Título</h3>
+        </header>
+        <nav>
+        </nav>
+        <main>
+            <table class="table table-dark">
+                <thead>
+                    <tr class="text-center">
+                        <td>ID</td>
+                        <td>Título</td>
+                        <td>Autor</td>
+                        <td>Genero</td>
+                        <td>Año de publicación</td>
+                        <td>Precio</td>
+                        <td>Stock</td>
+                        <td>Descripción</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="libro : ${lista}">
+                        <td th:text="${libro.id}"></td>
+                        <td th:text="${libro.titulo}"></td>
+                        <td th:text="${libro.autor}"></td>
+                        <td th:text="${libro.genero}"></td>
+                        <td th:text="${libro.anioPublicacion}"></td>
+                        <td th:text="${libro.precio}"></td>
+                        <td th:text="${libro.stock}"></td>
+                        <td th:text="${libro.descripcion}"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </main>
+        <footer>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

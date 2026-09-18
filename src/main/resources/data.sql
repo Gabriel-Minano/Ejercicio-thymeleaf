@@ -1,0 +1,1 @@
+INSERT INTO libro (titulo, autor, genero, anio_publicacion, precio, stock, descripcion) VALUES ('Ejemplo', 'Ana', 'Terror', 1999, 200.0, 15, 'No hay');
